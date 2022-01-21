@@ -1,5 +1,6 @@
 #
 # Copyright (C) 2017-2021 The LineageOS Project
+# Copyright (C) 2022 The LibreMobileOS Foundation
 #
 # SPDX-License-Identifier: Apache-2.0
 #
@@ -11,7 +12,7 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/product_launched_with_n_mr1.mk
 
 # Overlay
 DEVICE_PACKAGE_OVERLAYS += $(LOCAL_PATH)/overlay
-DEVICE_PACKAGE_OVERLAYS += $(LOCAL_PATH)/overlay-lineage
+DEVICE_PACKAGE_OVERLAYS += $(LOCAL_PATH)/overlay-lmodroid
 
 # Boot animation
 TARGET_SCREEN_HEIGHT := 1920
@@ -95,10 +96,6 @@ PRODUCT_COPY_FILES += \
 # Soong namespaces
 PRODUCT_SOONG_NAMESPACES += \
     $(LOCAL_PATH)
-
-# Touch HAL
-PRODUCT_PACKAGES += \
-    vendor.lineage.touch@1.0-service.xiaomi_8953
 
 # Update engine
 PRODUCT_PACKAGES += \
